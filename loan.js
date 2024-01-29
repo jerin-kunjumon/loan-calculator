@@ -9,7 +9,7 @@ function Calculate() {
     const months = document.querySelector("#months").value;
  
     // Calculating interest per month
-    const interest = (amount * (rate * 0.01)) / months;
+    const interest = parseFloat(((amount * (rate * 0.01)) / months).toFixed(2));
     const totalInterest = months*interest
     // Calculating total payment
     const monthlyPayment = ((amount / months) + interest).toFixed(2);
